@@ -36,7 +36,7 @@ const QuestionModal = ({
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false}>
+    <Modal className="border-none py-10 bg-white h-full w-full" isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false}>
       <div className="flex flex-col items-center w-full">
         <h2 className="text-lg font-bold mb-4">{question}</h2>
         <div className="flex flex-col">

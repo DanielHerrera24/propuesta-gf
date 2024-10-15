@@ -23,16 +23,18 @@ const Propuesta = () => {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowButtons(true);
-    }, 10000); // 30 segundos
+    if (showProposal) {
+      const timer = setTimeout(() => {
+        setShowButtons(true);
+      }, 20000);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [showProposal]);
 
   const handleNoClick = () => {
     setButtonSize((prevSize) => prevSize + 0.2);
-    setButtonOffset((prevOffset) => prevOffset + 1);
+    setButtonOffset((prevOffset) => prevOffset + 0.8);
   };
 
   return (
