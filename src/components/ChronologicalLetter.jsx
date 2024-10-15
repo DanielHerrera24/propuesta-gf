@@ -91,7 +91,7 @@ const ChronologicalLetter = ({ onComplete }) => {
             <>
               {!showFinalMessage ? (
                 <>
-                  <p className="text-lg mb-[80vh]">
+                  <p className="text-lg">
                     {moments[currentMoment].texto}
                   </p>
                   {/* <p className="text-lg">
