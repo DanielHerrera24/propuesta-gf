@@ -48,9 +48,9 @@ const Propuesta = () => {
               <div className="animate-proposal text-4xl font-bold text-red-600 mt-4">
                 ¿Te gustaría ser mi novia?
               </div>
-              <span className="absolute -bottom-4 -right-20 text-[10px] text-red-600">
+              {/* <span className="absolute -bottom-4 -right-20 text-[10px] text-red-600">
                 (oficialmente)
-              </span>
+              </span> */}
             </div>
           ) : (
             <div className="text-3xl font-bold mt-4">{countdown}</div>
