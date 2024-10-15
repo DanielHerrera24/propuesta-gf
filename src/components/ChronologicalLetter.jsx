@@ -65,6 +65,7 @@ const ChronologicalLetter = ({ onComplete }) => {
         setTimeout(() => {
           setCurrentMoment(currentMoment + 1);
           setIsLoading(false);
+          window.scrollTo({ top: 0, behavior: "instant" }); // Desplazarse a la parte superior
         }, 3000);
       }
     } else {
@@ -90,7 +91,7 @@ const ChronologicalLetter = ({ onComplete }) => {
             <>
               {!showFinalMessage ? (
                 <>
-                <p className="text-lg">
+                  <p className="text-lg mb-[80vh]">
                     {moments[currentMoment].texto}
                   </p>
                   {/* <p className="text-lg">
