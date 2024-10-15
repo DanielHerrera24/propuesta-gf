@@ -1,0 +1,48 @@
+.corazon {
+    animation: latido 1.5s infinite;
+    background-color: red;
+    display: inline-block;
+    height: 50px;
+    margin-top: 30vh;
+    margin-bottom: 25px;
+    transform: rotate(-45deg);
+    width: 50px;
+  }
+  
+  .corazon:before,
+  .corazon:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .corazon:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .corazon:after {
+    left: 25px;
+    top: 0;
+  }
+  
+  @keyframes latido {
+    0%
+    {
+      transform: scale( 1 )
+        rotate(-45deg);    
+    }
+    50%
+    {
+      transform: scale( 1.5 )
+        rotate(-45deg);  
+    }
+     100%
+    {
+      transform: scale( 1 )
+        rotate(-45deg);
+    }
+  }
