@@ -5,7 +5,7 @@ import React from "react";
 const Home = ({ onStart }) => {
   return (
     <div className="flex flex-col items-center justify-center h-[100vh] bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-      {/* <h1 className="text-4xl mb-4">¡Hiii, Manesita ^^!</h1>
+      <h1 className="text-4xl mb-4">¡Hiii, Manesita ^^!</h1>
       <p className="text-lg mx-4">
         Este es un regalito solo para ti🤭, espero te guste🤗.
       </p>
@@ -15,8 +15,8 @@ const Home = ({ onStart }) => {
       </p>
       <p className="text-lg mx-4">
         Es por eso que quiero demostrarte lo mucho que te quiero con este detallito❤️
-      </p> */}
-      <h1 className="text-2xl">Bienvenida</h1>
+      </p>
+      {/* <h1 className="text-2xl">Bienvenida</h1> */}
       <button
         onClick={onStart}
         className="bg-white text-green-600 px-4 py-2 mt-4 rounded-lg shadow-lg hover:bg-gray-100"

@@ -82,7 +82,7 @@ const ChronologicalLetter = ({ onComplete }) => {
   };
 
   return (
-    <div className="bg-white p-2 mt-10 flex flex-col items-center">
+    <div className="bg-white p-2 mt-10 flex flex-col items-center text-left">
       {moments.length > 0 ? (
         <>
           {isLoading ? (
@@ -91,37 +91,53 @@ const ChronologicalLetter = ({ onComplete }) => {
             <>
               {!showFinalMessage ? (
                 <>
-                  <p className="text-lg">
-                    {moments[currentMoment].texto}
-                  </p>
-                  {/* <p className="text-lg">
+                  <p className="text-lg pb-2">
                     {moments[currentMoment].description}
                   </p>
                   {moments[currentMoment].description2 && (
-                    <p className="text-lg">
+                    <p className="text-lg pb-2">
                       {moments[currentMoment].description2}
                     </p>
                   )}
                   {moments[currentMoment].description3 && (
-                    <p className="text-lg">
+                    <p className="text-lg pb-2">
                       {moments[currentMoment].description3}
                     </p>
                   )}
                   {moments[currentMoment].description4 && (
-                    <p className="text-lg">
+                    <p className="text-lg pb-2">
                       {moments[currentMoment].description4}
                     </p>
-                  )} */}
-                  {moments[currentMoment].url && (
-                    <img
-                      src={moments[currentMoment].url}
-                      alt="Moment"
-                      className="w-full sm:w-80 h-auto rounded-lg my-4"
-                    />
                   )}
+                  {moments[currentMoment].urls &&
+                    moments[currentMoment].urls.length > 0 && (
+                      <div className="flex flex-wrap justify-center gap-2 mt-6">
+                        {moments[currentMoment].urls.map((url, index) => (
+                          <div
+                            key={index}
+                            className="w-full sm:w-80 h-auto my-0 flex flex-col items-center"
+                          >
+                            <img
+                              src={url}
+                              className="w-full h-auto rounded-lg mb-2"
+                            />
+                            {moments[currentMoment].descriptionImgs &&
+                              moments[currentMoment].descriptionImgs[index] && (
+                                <p className="text-center text-sm text-gray-700">
+                                  {
+                                    moments[currentMoment].descriptionImgs[
+                                      index
+                                    ]
+                                  }
+                                </p>
+                              )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   <button
                     onClick={handleNext}
-                    className="bg-green-600 text-white px-4 py-2 rounded"
+                    className="bg-green-600 text-white px-4 py-2 my-8 rounded"
                   >
                     Continuar
                   </button>
@@ -146,11 +162,11 @@ const ChronologicalLetter = ({ onComplete }) => {
               ) : (
                 !showPropuesta && (
                   <>
-                    {/* <p className="text-lg mb-2">
+                    <p className="text-lg mb-2">
                       ¡Muy bien nenita :D! Has llegado hasta aquí respondiendo
                       correctamente a todas las preguntas ^^, pero queda una más
                       🫢.
-                    </p> */}
+                    </p>
                     <p className="text-lg mb-2">
                       ¿Estás lista para la última pregunta? :0
                     </p>
@@ -173,7 +189,7 @@ const ChronologicalLetter = ({ onComplete }) => {
           )}
         </>
       ) : (
-        <p>Cargando regalito...❤️</p>
+        <p></p>
       )}
     </div>
   );
