@@ -7,6 +7,7 @@ import QuestionModal from "./QuestionModal";
 import Propuesta from "./Propuesta";
 import "./propuesta.css";
 import "./corazon.css";
+import "./letter.css";
 
 const ChronologicalLetter = ({ onComplete }) => {
   const [moments, setMoments] = useState([]);
@@ -115,7 +116,7 @@ const ChronologicalLetter = ({ onComplete }) => {
                         {moments[currentMoment].urls.map((url, index) => (
                           <div
                             key={index}
-                            className="w-full sm:w-80 h-auto my-0 flex flex-col items-center"
+                            className="cont-imagen w-full sm:w-80 h-auto my-0 flex flex-col items-center fade-in"
                           >
                             <img
                               src={url}
@@ -163,7 +164,7 @@ const ChronologicalLetter = ({ onComplete }) => {
                 !showPropuesta && (
                   <>
                     <p className="text-lg mb-2">
-                      ¡Muy bien nenita :D! Has llegado hasta aquí respondiendo
+                      ¡Muy bien Manesita :D! Has llegado hasta aquí respondiendo
                       correctamente a todas las preguntas ^^, pero queda una más
                       🫢.
                     </p>

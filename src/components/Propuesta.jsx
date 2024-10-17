@@ -38,7 +38,7 @@ const Propuesta = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-10 text-center">
       {thanks ? (
         <h2 className="text-4xl font-bold text-green-600 mt-4">GRACIAS</h2>
       ) : (
