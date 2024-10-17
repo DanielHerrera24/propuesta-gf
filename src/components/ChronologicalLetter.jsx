@@ -136,9 +136,19 @@ const ChronologicalLetter = ({ onComplete }) => {
                         ))}
                       </div>
                     )}
+                  {moments[currentMoment].descriptionAbajo && (
+                    <p className="text-lg pb-2 pt-6">
+                      {moments[currentMoment].descriptionAbajo}
+                    </p>
+                  )}
+                  {moments[currentMoment].descriptionAbajo2 && (
+                    <p className="text-lg pb-2">
+                      {moments[currentMoment].descriptionAbajo2}
+                    </p>
+                  )}
                   <button
                     onClick={handleNext}
-                    className="bg-green-600 text-white px-4 py-2 my-8 rounded"
+                    className="bg-green-600 text-white px-4 py-2 my-20 rounded"
                   >
                     Continuar
                   </button>
