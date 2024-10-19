@@ -112,7 +112,7 @@ const ChronologicalLetter = ({ onComplete }) => {
                   )}
                   {moments[currentMoment].urls &&
                     moments[currentMoment].urls.length > 0 && (
-                      <div className="flex flex-wrap justify-center gap-2 mt-6">
+                      <div className="flex flex-wrap justify-center gap-2 mt-9">
                         {moments[currentMoment].urls.map((url, index) => (
                           <div
                             key={index}
