@@ -113,29 +113,48 @@ const ChronologicalLetter = ({ onComplete }) => {
                   {moments[currentMoment].urls &&
                     moments[currentMoment].urls.length > 0 && (
                       <div className="flex flex-wrap justify-center gap-2 mt-9">
-                        {moments[currentMoment].urls.map((url, index) => (
-                          <div
-                            key={index}
-                            className="cont-imagen w-full sm:w-80 h-auto my-0 flex flex-col items-center fade-in"
-                          >
-                            <img
-                              src={url}
-                              className="w-full h-auto rounded-lg mb-2"
-                            />
-                            {moments[currentMoment].descriptionImgs &&
-                              moments[currentMoment].descriptionImgs[index] && (
-                                <p className="text-center text-sm text-gray-700">
-                                  {
-                                    moments[currentMoment].descriptionImgs[
-                                      index
-                                    ]
-                                  }
-                                </p>
+                        {moments[currentMoment].urls.map((url, index) => {
+                          // Identificar si la URL es una imagen o video por su extensión
+                          const isVideo =
+                            url.includes(".mp4") || url.includes(".webm");
+                          return (
+                            <div
+                              key={index}
+                              className="cont-imagen w-full sm:w-80 h-auto my-0 flex flex-col items-center fade-in"
+                            >
+                              {isVideo ? (
+                                <video
+                                  controls
+                                  className="w-full h-auto rounded-lg mb-2 shadow-lg md:transform md:transition-transform md:duration-300 md:hover:scale-105"
+                                >
+                                  <source src={url} type="video/mp4" />
+                                  Tu navegador no soporta la reproducción de
+                                  video.
+                                </video>
+                              ) : (
+                                <img
+                                  src={url}
+                                  className="w-full h-auto rounded-lg mb-2 shadow-lg md:transform md:transition-transform md:duration-300 md:hover:scale-105"
+                                />
                               )}
-                          </div>
-                        ))}
+                              {moments[currentMoment].descriptionImgs &&
+                                moments[currentMoment].descriptionImgs[
+                                  index
+                                ] && (
+                                  <p className="text-center text-sm text-gray-700">
+                                    {
+                                      moments[currentMoment].descriptionImgs[
+                                        index
+                                      ]
+                                    }
+                                  </p>
+                                )}
+                            </div>
+                          );
+                        })}
                       </div>
                     )}
+
                   {moments[currentMoment].descriptionAbajo && (
                     <p className="text-lg pb-2 pt-6">
                       {moments[currentMoment].descriptionAbajo}
