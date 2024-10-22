@@ -83,7 +83,7 @@ const ChronologicalLetter = ({ onComplete }) => {
   };
 
   return (
-    <div className="bg-white p-2 mt-10 flex flex-col items-center text-left">
+    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-300 p-2 pt-10 flex flex-col items-center text-left">
       {moments.length > 0 ? (
         <>
           {isLoading ? (
@@ -167,7 +167,7 @@ const ChronologicalLetter = ({ onComplete }) => {
                   )}
                   <button
                     onClick={handleNext}
-                    className="bg-green-600 text-white px-4 py-2 my-20 rounded"
+                    className="bg-green-600 text-white px-4 py-2 mt-10 mb-20 rounded"
                   >
                     Continuar
                   </button>
@@ -207,7 +207,7 @@ const ChronologicalLetter = ({ onComplete }) => {
                     </p>
                     <button
                       onClick={startPropuesta}
-                      className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+                      className="mt-4 bg-purple-600 text-white px-4 py-2 rounded"
                     >
                       Pregunta final
                     </button>

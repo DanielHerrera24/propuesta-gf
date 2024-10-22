@@ -36,15 +36,15 @@ const QuestionModal = ({
   };
 
   return (
-    <Modal className="border-none bg-white h-full w-full" isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false}>
-      <div className="flex flex-col items-center w-full h-full justify-center">
-        <h2 className="text-lg font-bold mb-4 px-3">{question}</h2>
+    <Modal className="border-none bg-gradient-to-b from-purple-300 to-blue-300 h-full w-full" isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false}>
+      <div className="flex flex-col items-center w-full h-full justify-center text-center">
+        <h2 className="text-2xl font-semibold mb-6 text-gray-800 font-poppins px-3">{question}</h2>
         <div className="flex flex-col">
           {options.map((option, index) => (
             <button
               key={index}
               onClick={() => handleAnswer(option)}
-              className="mb-2 bg-blue-500 text-white px-12 py-2 rounded"
+              className="mb-2 bg-blue-500 text-white px-12 py-2 rounded-full"
             >
               {option}
             </button>
