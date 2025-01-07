@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ThankYou from "./ThankYou";
 
 const Propuesta = () => {
   const [countdown, setCountdown] = useState(10);
@@ -40,20 +41,20 @@ const Propuesta = () => {
   return (
     <div className="flex flex-col items-center mt-10 text-center">
       {thanks ? (
-        <h2 className="text-4xl font-bold text-green-600 mt-4">GRACIAS</h2>
+        <ThankYou />
       ) : (
         <>
           {showProposal ? (
-            <div>
-              <div className="font-poppins animate-proposal text-3xl font-bold text-red-600 mt-4">
+            <div className="min-h-screen">
+              <div className="font-poppins animate-proposal text-4xl font-bold text-red-600 mt-4">
                 ¿QUIERES SER MI NOVIA?
               </div>
             </div>
           ) : (
-            <div className="text-3xl font-bold mt-4">{countdown}</div>
+            <div className="text-6xl font-bold mt-4">{countdown}</div>
           )}
           {showButtons && (
-            <div className="mt-4">
+            <div className="mt-4 mb-64">
               <button
                 onClick={() => setThanks(true)} // Cambia a true al hacer clic en "Sí"
                 style={{

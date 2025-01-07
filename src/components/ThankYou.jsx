@@ -1,9 +1,9 @@
 const ThankYou = () => {
   return (
-    <div className="bg-white p-4 mt-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-green-600">¡Gracias!</h1>
-      <p className="text-lg mt-4">Tu respuesta ha sido registrada. ¡Estamos muy felices!</p>
-      <p className="text-lg mt-2">Esperamos que disfrutes de tu día.</p>
+    <div className="p-4 mt-10 flex flex-col items-center">
+      <h3 className="text-2xl font-bold text-green-600">Este es el comienzo de una nueva etapa</h3>
+      <p className="text-lg mt-4">Gracias por ser quien eres y por hacerme tan felíz.</p>
+      <p className="text-lg mt-2">Disfrutemos de nosotros :D</p>
     </div>
   );
 };

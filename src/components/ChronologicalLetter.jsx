@@ -82,6 +82,10 @@ const ChronologicalLetter = ({ onComplete }) => {
     setShowPropuesta(false);
   };
 
+  const irAlFinal = () => {
+    setShowFinalMessage(true)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-300 p-2 pt-10 flex flex-col items-center text-left">
       {moments.length > 0 ? (
@@ -170,6 +174,12 @@ const ChronologicalLetter = ({ onComplete }) => {
                     className="bg-green-600 text-white px-4 py-2 mt-10 mb-20 rounded"
                   >
                     Continuar
+                  </button>
+                  <button
+                    onClick={irAlFinal}
+                    className="bg-green-600 text-white px-4 py-2 mt-10 mb-20 rounded"
+                  >
+                    Ir al final
                   </button>
 
                   {/* Modal de pregunta */}
